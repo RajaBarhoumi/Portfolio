@@ -1,0 +1,39 @@
+.c{
+  color: #c04cc0 ;
+}
+.f{
+  float: right;
+ 
+}
+.text-primary {
+  color: #c215ab !important;
+}
+.t{
+  color: black !important;
+}
+.h :hover{
+  color: #c04cc0 !important;
+  overflow: visible;
+}
+.h{
+  overflow: hidden;
+}
+
+a.text-primary:hover, a.text-primary:focus {
+  color: #850766 !important;
+}
+.fff{
+  margin-left: 220px;
+}
+
+.ff{
+  margin-left: 550px;
+}
+
+.ml-auto{
+  float: right;
+  margin-left: 500px;
+}
+
+
+

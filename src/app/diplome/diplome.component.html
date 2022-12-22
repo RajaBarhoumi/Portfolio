@@ -1,0 +1,92 @@
+<app-navigation></app-navigation>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="diplome.component.css">
+    <title>Document</title>
+    <script>
+        $(".white-box").hover(function() {
+  
+  $(".cc").css("background-color","white");
+  
+}, function() {
+  
+  $(".cc").css("background-color","white");
+  
+});
+    </script>
+</head>
+<body style="background-color: #f4ccf4;">
+    <div class=" align-items-center t">
+        <h1 class=" text-uppercase  tt" >DIPLÔMES<span><h1>et formation</h1></span></h1>
+    </div>
+    <div class=" main">
+        <div class="row align-items-center">
+            
+            
+        </div>
+    
+ 
+        <div class="cc">
+            <div class="white-box">
+              
+            
+              <!--<div class="vertical-line "></div>-->
+              <div  class="col-sm-6 py-2" id="box1"><h3 style="color:  #c215ab;" >Diplomes:</h3>
+                <table border="0">
+                    <tbody *ngFor="let dip of tabD">
+                        <tr><h5 class="font-weight-bold mb-2"><ul style="list-style-type:circle;"><li><b>{{dip.nomD}}</b></li></ul></h5></tr>
+                        <tr><small><h6 class="mb-2">{{dip.lieuD}} | {{dip.anD}}</h6></small></tr>  
+                    </tbody>
+
+                </table>
+              </div>
+              <div  class="col-sm-6 py-2 " id="box2"><h3 style="color:  #c215ab;">Formations: </h3>
+                <table border="0">
+                    <tbody *ngFor="let form of tabF">
+                        <tr><h5 class="font-weight-bold mb-2"><ul style="list-style-type:circle;"><li><b>{{form.nomF}}</b></li></ul></h5></tr>
+                        <tr><small><h6 class="mb-2">{{form.lieuF}} | {{form.anF}}</h6></small></tr>  
+                    </tbody>
+
+                </table>
+                
+              </div>
+             
+              
+              
+
+            </div>
+            <!--
+            <div class="main" style="background-color: #f4ccf4;">
+                <a href="https://github.com/RajaBarhoumi">
+                    <i class="svg-icon github"></i>
+                </a>
+              </div>
+              -->
+        </div>
+       
+    </div>
+    
+    
+    <!--
+    <div class="container-fluid  mt-5 py-5 px-sm-3 px-md-5">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-3">
+                
+                <a class="btn btn-light btn-social mr-2 fab fa-github" href="https://github.com/RajaBarhoumi"></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/raja-barhoumi/"><i class="fab fa-linkedin-in"></i></a>
+              
+            </div>
+            
+            
+        </div>
+    </div>
+    -->
+</body>
+</html >
+
+    
+

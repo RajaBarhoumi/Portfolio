@@ -1,0 +1,57 @@
+<app-navigation></app-navigation>
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Connexion</title>
+      <link rel="stylesheet" href="connexion.component.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <div class="container">
+         <header> 
+                <div class=" align-items-center t">
+                    <h1 class=" text-uppercase  tt" >Se connecter</h1>
+                 </div>
+            </header>
+         <form>
+            <div class="input-field">
+               <input type="text" (change)="reset()" name="email" class="form-control" [(ngModel)]="email" minlength="5" required>
+               <label>Email</label>
+            </div>
+            <div class="input-field">
+               <input type="password" (change)="reset()" name="password" [(ngModel)]="password" class="form-control" minlength="6" required>
+               <span class="show">Afficher</span>
+               <label>Mot de passe</label>
+            </div>
+            <div class="text-err" *ngIf="erreur">
+                <p>Login et/ou mot de passe incorrect</p>
+               </div>
+            <div class="button">
+               <div class="inner"></div>
+               <button  (click)="connected()">Connexion</button>
+            </div>
+         </form>
+         
+         
+         
+      </div>
+      <script>
+         var input = document.querySelector('.password');
+         var show = document.querySelector('.show');
+         show.addEventListener('click', active);
+         function active(){
+           if(input.type === "password"){
+             input.type = "text";
+             show.style.color = "#1DA1F2";
+             show.textContent = "HIDE";
+           }else{
+             input.type = "password";
+             show.textContent = "SHOW";
+             show.style.color = "#111";
+           }
+         }
+      </script>
+   </body>
+</html>

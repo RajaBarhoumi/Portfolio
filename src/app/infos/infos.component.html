@@ -1,0 +1,91 @@
+<app-navigation></app-navigation>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="infos.component.css">
+    <title>Document</title>
+    <script>
+        $(".white-box").hover(function() {
+  
+  $(".cc").css("background-color","white");
+  
+}, function() {
+  
+  $(".cc").css("background-color","white");
+  
+});
+    </script>
+</head>
+<body style="background-color: #edd1ed;">
+    <div class=" main">
+        <div class="row align-items-center">
+            <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
+                <img class="i" src="../assets/img/imm.jpg"  alt="">
+            </div>
+            <div class="col-7 text-left b">
+                <!-- <h3 class="text-white font-weight-normal mb-3">I'm</h3> -->
+                <h1 class="typed-text-output d-inline font-weight-lighter text-white "></h1>
+                <h1 class=" wrapper" style="color:  #c215ab;"><span class="typing-demo"><b>{{ coordonnees.nom }}</b></span></h1>
+                
+            </div>
+        </div>
+    
+ 
+        <div class="cc">
+            <div class="white-box">
+              
+            <div class="featured">{{ coordonnees.info }}</div><br>
+                <span><img src="../assets/img/address.png" height="25px"> {{coordonnees.address}}</span><br><br>
+                <span><img src="../assets/img/email.png" height="20px" width="25px"> {{coordonnees.mail}}</span><br><br>
+                <span><img src="../assets/img/linkedin.png" height="25px" width="25px"><a href="{{coordonnees.linkedin}}"> {{coordonnees.linkedin}}</a> </span><br> <br>
+                <span><img src="../assets/img/github.png" height="25px" width="25px"> <a href="{{coordonnees.github}}"> {{coordonnees.github}}</a></span>
+                <br><hr>
+              <!--<div class="vertical-line "></div>-->
+              <div  class="col-sm-6 py-2" id="box1"><h3 style="color:  #c215ab;">Vie associative:</h3>
+                <div class="col-sm-6 py-2"><h5>{{coordonnees.po}} du <span class="text-secondary"><h6>{{coordonnees.co}}</h6></span></h5></div>
+                 <div class="col-sm-6 py-2"><h5>{{coordonnees.pe}} du <span class="text-secondary"><h6>{{coordonnees.ce}}</h6></span></h5></div>
+              </div>
+              <div  class="col-sm-6 py-2" id="box2"><h3 style="color:  #c215ab;">Centres d'intérêt: </h3>
+                <div class="col-sm-6 py-2"><h5>{{coordonnees.d}} </h5></div>
+                <br><div class="col-sm-6 py-2"><h5>{{coordonnees.dp}}</h5></div>
+                
+              </div>
+             
+              
+              
+
+            </div>
+            <!--
+            <div class="main" style="background-color: #f4ccf4;">
+                <a href="https://github.com/RajaBarhoumi">
+                    <i class="svg-icon github"></i>
+                </a>
+              </div>
+              -->
+        </div>
+       
+    </div>
+    
+    
+    <!--
+    <div class="container-fluid  mt-5 py-5 px-sm-3 px-md-5">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-3">
+                
+                <a class="btn btn-light btn-social mr-2 fab fa-github" href="https://github.com/RajaBarhoumi"></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/raja-barhoumi/"><i class="fab fa-linkedin-in"></i></a>
+              
+            </div>
+            
+            
+        </div>
+    </div>
+    -->
+</body>
+</html >
+
+    
+

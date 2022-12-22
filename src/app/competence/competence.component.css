@@ -1,0 +1,212 @@
+.tt{
+    text-align: center;
+    color:#c215ab;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(207, 71, 231), 0 0 5px rgb(150, 16, 112);
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #edd1ed;
+}
+::selection{
+  color: #f4ccf4;
+  background: #9cbaf1;
+}
+.skill-bars{
+    width: 900px; height: 650px; margin-top: 30px; margin-left: -10px; margin-right: auto;   
+  
+    background: rgba(255,255,255,0.3);
+    padding: 30px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+.skill-bars .bar{
+  margin: 20px 0;
+}
+.skill-bars .bar:first-child{
+  margin-top: 0px;
+}
+.skill-bars .bar .info{
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span{
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line{
+  height: 10px;
+  width: 80%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+              0 1px rgba(255,255,255,0.8);
+  animation: animate 2s cubic-bezier(1,0,0.7,1) forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span{
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #ca9ee9;
+  animation: animate 2s 2s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line.HTML5 span{
+  width: 90%;
+}
+.bar .progress-line.CSS3 span{
+  width: 70%;
+}
+.bar .progress-line.Javascript span{
+  width: 65%;
+}
+.bar .progress-line.AngularJS span{
+  width: 60%;
+}
+.progress-line.AngularJS span::after{
+  content: "60%";
+}
+.bar .progress-line.PHP span{
+  width: 60%;
+}
+.progress-line.PHP span::after{
+  content: "60%";
+}
+.bar .progress-line.Bootstrap span{
+  width: 40%;
+}
+.progress-line.Bootstrap span::after{
+  content: "40%";
+}
+.bar .progress-line.Django span{
+  width: 35%;
+}
+.progress-line.Django span::after{
+  content: "35%";
+}
+.bar .progress-line.C span{
+  width: 60%;
+}
+.progress-line.C span::after{
+  content: "60%";
+}
+.bar .progress-line.Java span{
+  width: 65%;
+}
+.progress-line.Java span::after{
+  content: "65%";
+}
+.bar .progress-line.MySQL span{
+  width: 70%;
+}
+.progress-line.MySQL span::after{
+  content: "70%";
+}
+.bar .progress-line.Arabe span{
+  width: 95%;
+}
+.progress-line.Arabe span::after{
+  content: "95%";
+}
+.bar .progress-line.Français span{
+  width: 80%;
+}
+.progress-line.Français span::after{
+  content: "80%";
+}
+.bar .progress-line.Anglais span{
+  width: 70%;
+}
+.progress-line.Anglais span::after{
+  content: "70%";
+}
+.bar .progress-line.Allemand span{
+  width: 30%;
+}
+.progress-line.Allemand span::after{
+  content: "30%";
+}
+.progress-line span::before{
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 1.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100%{
+    opacity: 1;
+  }
+}
+.progress-line.HTML5 span::after{
+  content: "90%";
+}
+.progress-line.Javascript span::after{
+  content: "65%";
+}
+.progress-line.CSS3 span::after{
+  content: "70%";
+}
+
+#box2 {
+  
+    margin-left: 530px;
+    margin-top: -550px;
+   
+   
+  }
+
+.t{
+  margin-top: 50px;
+}
+
+

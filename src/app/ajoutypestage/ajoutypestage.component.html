@@ -1,0 +1,26 @@
+<app-navigation></app-navigation>
+<link rel="stylesheet" href="ajoutypestage.component.css">
+<div class="container">
+    <div>
+        <h2>Ajouter un type de stage</h2> 
+    </div>
+    <form >
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <label >Code</label>
+                <input type="number" [(ngModel)]="newType.codeT" name="codeT" class="form-control">
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4" >
+                <label >Nom</label>
+                <input type="text"[(ngModel)]="newType.nomT" name="nomT" class="form-control">
+            </div>
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <label >Obligation</label>
+                <textarea rows="5" cols="33"  [(ngModel)]="newType.description" name="description" class="form-control"></textarea>
+            </div>
+            
+           
+            <div class="mt-2">
+                <button type="submit" (click)="addType()" class="btn btn-success">Ajouter</button>
+            </div>
+    </form>
+</div>

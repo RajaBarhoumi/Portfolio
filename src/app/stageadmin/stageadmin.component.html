@@ -1,0 +1,71 @@
+<app-navigation></app-navigation>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stageadmin.component.css">
+    <title>Document</title>
+    <script>
+        $(".white-box").hover(function() {
+  
+  $(".cc").css("background-color","white");
+  
+}, function() {
+  
+  $(".cc").css("background-color","white");
+  
+});
+    </script>
+</head>
+<body style="background-color: #edd1ed;">
+   
+    <div class="container">
+        <div class="card shadow mb-4 s"> 
+           <div class="card-body s">
+            
+              <!--<div class="vertical-line "></div>-->
+              <div class="s">
+                <h1>Stage </h1>
+                <table >
+                    <thead>
+                        <tr>
+                           <th scope="col" *ngIf="cnxServ.isConnected">Code</th>
+                           <th scope="col">Type</th>
+                           <th scope="col">Société</th>
+                           <th scope="col">Durée en mois</th>
+                           <th scope="col">Sujet</th>
+                           <th scope="col">Technologies utilisées:</th> 
+                           <th scope="col" *ngIf="cnxServ.isConnected">Action</th>  
+                           
+                        </tr>
+                    </thead> 
+                    <tbody *ngFor="let sta of tabS">
+                       
+                        <tr >
+                            <td *ngIf="cnxServ.isConnected">{{sta.codeS}}</td>
+                            <td>{{sta.typs.nomT}}</td>
+                            <td>{{sta.lieuS}}</td>
+                            <td>{{sta.moisS}}</td>
+                            <td>{{sta.sujetS}}</td>
+                            <td>{{sta.techS}}</td>
+                            <td *ngIf="cnxServ.isConnected">
+                            <a class="float-left" [routerLink]="['/updateStage',sta.codeS]" *ngIf="cnxServ.isConnected">
+                               
+                                <img id="l" src="../assets/img/edit.png" height="40" width="38">
+                            </a>
+                            <br><hr>
+                            <a  (click)="suppStage(sta)" *ngIf="cnxServ.isConnected">
+                              <img id="l" src="../assets/img/delete.png" height="40" width="38">
+                            </a>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt-2" *ngIf="cnxServ.isConnected">
+                    <button type="submit" routerLink="/ajoutStage" class="btn btn-success">Ajouter</button>
+                </div>
+            </div>
+        </div>
+    </div>

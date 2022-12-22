@@ -1,0 +1,41 @@
+<app-navigation></app-navigation>
+<link rel="stylesheet" href="ajoutstage.component.css">
+<div class="container">
+    <div>
+        <h2>Ajouter un stage</h2> 
+    </div>
+    <form >
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <label >Code</label>
+                <input type="number" [(ngModel)]="newStage.codeS" name="codeS" class="form-control">
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <label>Type</label>
+                <select class="form-control form-control-lg" id="codeT" name="codeT"[(ngModel)]="newCodeT">
+                    <option *ngFor="let ti of tabT" [value]="ti.codeT">
+                        {{ti.nomT}}
+                    </option>
+                </select>
+            </div>
+            
+            <div class="col-sm-4 col-md-4 col-lg-4" >
+                <label >Société</label>
+                <input type="text"[(ngModel)]="newStage.lieuS" name="lieuS" class="form-control">
+            </div>
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <label >Durée en mois</label>
+                <input type="number" [(ngModel)]="newStage.moisS" name="moisS" class="form-control">
+            </div>
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <label >Sujet</label>
+                <input type="text" [(ngModel)]="newStage.sujetS" name="sujetS" class="form-control">
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <label >Technologies utilisées</label>
+                <textarea rows="5" cols="33" [(ngModel)]="newStage.techS" name="techS" class="form-control"></textarea>
+            </div>
+            <div class="mt-2">
+                <button type="submit" (click)="addStage()" class="btn btn-success">Ajouter</button>
+            </div>
+    </form>
+</div>

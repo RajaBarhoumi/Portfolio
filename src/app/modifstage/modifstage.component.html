@@ -1,0 +1,40 @@
+<app-navigation></app-navigation>
+<link rel="stylesheet" href="modifstage.component.css">
+
+<div class="container">
+    <div>
+        <h2>Modifier stage</h2> 
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label >Code</label>
+            <input readonly type="number" [(ngModel)]="stageCourant.codeS" name="codeS" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+            <label >Entreprise</label>
+            <input type="text"[(ngModel)]= "stageCourant.lieuS" name="lieuS" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Type</label>
+            <select class="form-control form-control-lg" id="codec" name="codec" [(ngModel)]="codecModifie">
+                <option *ngFor="let ti of typ" [value]=" ti.codeT">{{ ti.nomT}}</option>
+            </select>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label >Sujet</label>
+            <input type="text" [(ngModel)]= "stageCourant.sujetS" name="sujetS" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label >Mois</label>
+            <input type="number" [ngModel]="stageCourant.moisS"  name="moisS" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label >Technologies utilisées</label>
+            <textarea rows="5" cols="33"  [(ngModel)]= "stageCourant.techS" name="techS" class="form-control"></textarea>
+        </div>
+        <div class="mt-2">
+            <button type="submit" (click)="modifStage()" class="btn btn-success">Modifer</button>
+        </div>
+    </form>
+</div>    
+

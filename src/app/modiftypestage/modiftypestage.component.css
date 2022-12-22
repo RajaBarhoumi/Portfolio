@@ -1,0 +1,10 @@
+button{
+    background-color: #c215ab;
+  }
+  button:hover{
+    background-color: #e072d1;
+    color: black;
+  }
+  h2{
+    color:#c215ab ;
+  }
